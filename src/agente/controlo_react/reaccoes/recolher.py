@@ -3,6 +3,7 @@
 from agente.controlo_react.reaccoes.aproximar.aproximar_alvo import AproximarAlvo
 from agente.controlo_react.reaccoes.explorar.explorar import Explorar
 from agente.controlo_react.reaccoes.explorar.explorar_rodar import ExplorarRodar
+from .evitar.evitar_obst import EvitarObst
 from ecr.hierarquia import Hierarquia
 class Recolher(Hierarquia):
     '''
@@ -11,6 +12,6 @@ class Recolher(Hierarquia):
     '''
     # Equivalente a static de Java
     #__comportamentos = [AproximarAlvo(), EvitarObst(), Explorar()]
-    __comportamentos = [AproximarAlvo(), Explorar()] #ExplorarRodar() 
+    __comportamentos = [AproximarAlvo(), EvitarObst(), Explorar()] #ExplorarRodar() 
     def __init__(self):
         super().__init__(self.__comportamentos)
