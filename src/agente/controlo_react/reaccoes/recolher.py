@@ -11,6 +11,6 @@ class Recolher(Hierarquia):
     '''
     # Equivalente a static de Java
     #__comportamentos = [AproximarAlvo(), EvitarObst(), Explorar()]
-    __comportamentos = [AproximarAlvo(), Explorar()]
+    __comportamentos = [AproximarAlvo(), Explorar()] #ExplorarRodar() 
     def __init__(self):
         super().__init__(self.__comportamentos)
