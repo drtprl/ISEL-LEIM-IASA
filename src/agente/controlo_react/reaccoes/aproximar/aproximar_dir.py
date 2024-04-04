@@ -1,7 +1,11 @@
+from .estimulo_alvo import EstimuloAlvo
+from agente.controlo_react.reaccoes.resposta.resposta_mover import RespostaMover
 from ecr.reaccao import Reaccao
 
 class AproximarDir(Reaccao):
 
     def __init__(self, direccao):
-        raise NotImplementedError
+        estimulo = EstimuloAlvo(direccao)
+        resposta = RespostaMover(direccao)
+        super().__init__(estimulo, resposta)
 
