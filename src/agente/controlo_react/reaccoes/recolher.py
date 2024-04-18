@@ -11,7 +11,7 @@ class Recolher(Hierarquia):
     definimos os niveis de competencia segundo Hierarquía.
     '''
     # Equivalente a static de Java
-    #__comportamentos = [AproximarAlvo(), EvitarObst(), Explorar()]
+    #__comportamentos = [Explorar()]
     __comportamentos = [AproximarAlvo(), EvitarObst(), Explorar()] #ExplorarRodar() 
     def __init__(self):
         super().__init__(self.__comportamentos)

@@ -10,4 +10,4 @@ class EstimuloObst(Estimulo):
         if(percepcao.contacto_obst(self.__direccao)):
             return self.__intensidade
         else:
-            return 0
+            return 0.0

@@ -10,5 +10,5 @@ class AgenteReactivo(Agente):
 
 # Executar a simulação
 if __name__ == "__main__":
-    Simulador(1, AgenteReactivo()).executar()
+    Simulador(4, AgenteReactivo()).executar()
 
