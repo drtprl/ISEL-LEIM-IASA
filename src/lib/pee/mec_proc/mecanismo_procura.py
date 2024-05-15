@@ -10,7 +10,7 @@ class MecanismoProcura(ABC):
         self._fronteira = fronteira
 
     def _iniciar_memoria(self):
-        raise NotImplementedError
+        self._fronteira.iniciar()
     
     @abstractmethod
     def _memorizar(self, no):
@@ -19,6 +19,9 @@ class MecanismoProcura(ABC):
         '''
     
     def procurar(self, problema):
+        '''
+        Procura a solucao
+        '''
         self._iniciar_memoria()
         no = No(problema.estado_inicial)
         # Memoria iniciada com o estado inicial guardado
@@ -32,7 +35,7 @@ class MecanismoProcura(ABC):
                 # utiliza o inserir conveniente
                 self._memorizar(no_sucessor)
     
-    def _expandir(problema, no):
+    def _expandir(self, problema, no):
         sucessores = []
         estado = no.estado
         for operador in problema.operadores:

@@ -25,7 +25,7 @@ class No:
         return self.__profundidade
     
     def __init__(self, estado, operador = None, antecessor = None, custo = 0.0):
-        self.__estado = estado
+        self.__estado = estado # o qué é? aberto ou fechado
         self.__operador = operador
         self.__antecessor = antecessor
         self.__custo = custo
