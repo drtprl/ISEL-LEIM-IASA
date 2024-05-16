@@ -6,6 +6,9 @@ class OperadorIncremento(Operador):
     @property
     def incremento(self):
         return self.__incremento
+    
+    def __str__(self):
+        return str(self.incremento)
 
     def __init__(self, incremento):
         self.__incremento = incremento
