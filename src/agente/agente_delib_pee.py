@@ -2,7 +2,6 @@ from agente.agente_reactivo import AgenteReactivo
 from sae import Agente, Simulador
 from plan.plan_pee.planeador_pee import PlaneadorPEE
 from controlo_delib.controlo_delib import ControloDelib
-#from .agente_reactivo import AgenteReactivo
 
 class AgenteDelibPEE(Agente):
     def __init__(self):

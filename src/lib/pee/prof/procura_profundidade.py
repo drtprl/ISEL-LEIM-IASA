@@ -61,5 +61,5 @@ class ProcuraProfundidade(MecanismoProcura):
         '''
         Memorizamos o nó pretendido com a lógica de ordenação da FronteiraLIFO.
         '''
-        print(no.estado.valor)
+        #print(no.estado.valor)
         self._fronteira.inserir(no)

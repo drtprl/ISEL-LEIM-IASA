@@ -7,6 +7,13 @@ class ProcuraMelhorPrim(ProcuraGrafo):
     com a classe Avaliador passada como argumento no construtor deste método
     de procura.
 
+    Podemos calcular o custo da função de três maneiras ao realizar a busca do 
+    melhor primeiro sobre o espaço de estados. A primeira é colocar a 
+    prioridade dos nós segundo o custo dos nós explorados, segunda calculando a
+    prioridade através da estimativa do custo por meio de uma função heurística
+    com a procura sôfrega, e por último, juntandos os dois casos para obter a 
+    busca A*
+
     Temos f(n)>=0, função avaliadora, que usualmente representa uma estimativa 
     do custo da solução através do nó "n". O que se pretende é minimizar o 
     custo, para isso os nós são analizados em ordem crescente de f(n), quanto 

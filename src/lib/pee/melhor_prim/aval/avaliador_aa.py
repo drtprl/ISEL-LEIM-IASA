@@ -2,7 +2,7 @@ from .avaliador_heur import AvaliadorHeur
 
 class AvaliadorAA(AvaliadorHeur):
     """Classe que implementa a f(n)=g(n)+h(n) da procura AA que é a combinação 
-    do caminho já percorrido até ao nó, mais o custo estimado até o objectivo.
+    do caminho já percorrido até ao nó, mais o custo estimado até ao objectivo.
 
     Esta classificação dos nós permite diminuir a complexidade espacial em 
     comparação com a procura de custo uniforme, porem terá sempre um custo 
