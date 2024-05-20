@@ -5,7 +5,9 @@ class ModeloPDM(ABC):
     """
     @abstractmethod
     def S(self):
-        ''''''
+        '''
+        Método que representado o conjunto de estados, iterando
+        '''
 
     @abstractmethod
     def A(self, s):
@@ -21,4 +23,4 @@ class ModeloPDM(ABC):
         
     @abstractmethod
     def suc(self, s, a):
-        ''''''
+        '''Retornamos uma lista de estados possíveis realizando essa acção'''

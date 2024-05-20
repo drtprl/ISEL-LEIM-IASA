@@ -1,12 +1,24 @@
 from .mec_util import MecUtil
 
 class PDM:
-
+    """A classe PDM, processos de decissão de Markov, 
+    """
     def __init__(self, modelo, gama, delta_max):
         self.__mec_util = MecUtil(modelo, gama, delta_max)
         self.__modelo = modelo
     
     def politica(self, U):
+        """A política deve representar o que o agente deve fazer para cada 
+        estado. Por tanto, esta função devolve a accao recomendada pela 
+        polític para este estado.
+
+        Args:
+            U (Utilidade): Para produzir uma política devemos ter a utilidade
+
+
+        Returns:
+            _type_: _description_
+        """
         #guardamos funções e não valores
         S, A = self.__modelo.S, self.__modelo.A
         pol = {}
