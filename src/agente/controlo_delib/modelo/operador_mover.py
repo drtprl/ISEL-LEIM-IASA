@@ -18,7 +18,7 @@ class OperadorMover(Operador):
         self.__modelo_mundo = modelo_mundo
         self.__accao = Accao(direccao)
 
-    def __translaccao(self, posicao, distancia, angulo):
+    def __translacao(self, posicao, distancia, angulo):
         '''Método coeso, modularidade.
         coeso é que ao modularizar devemos juntar
         as coisas segundo partilhem coisas'''
@@ -34,7 +34,8 @@ class OperadorMover(Operador):
         essa translacao é um estado válido dentro dos estados guardados no
         nosso modelo do mundo
         '''
-        nova_posicao = self.__translaccao(estado.posicao, self.accao.passo, self.ang)
+        #tava escrito translaccao
+        nova_posicao = self.__translacao(estado.posicao, self.accao.passo, self.ang)
         novo_estado = EstadoAgente(nova_posicao)
         # Só devolvemos o estado se ele não for um obstáculo,
         # nesse caso deve estar no estados validos do modelo do mundo.

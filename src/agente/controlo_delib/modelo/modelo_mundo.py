@@ -5,6 +5,18 @@ from sae import Direccao, Elemento
 from .operador_mover import OperadorMover
 
 class ModeloMundo(ModeloPlan):
+    """
+    O modelo do mundo oferece uma representação do mundo para ser processada 
+    pelo controlo deliberativo do agente. Esta classe implementa o método
+    actualizar() utilizado para colocar em contexto a percepcao do agente
+    cada vez que processamos um novo estado, dando uma funcionalidade de 
+    analise dinámico do ambiente. Através da propriedade estados, obtemos uma
+    lista das posicoes do ambiente e analizamos se alguma delas é um ALVO. 
+
+    O ambiente só é alterado se um dos alvos for atingido, por isso devemos
+    reconsiderar e posteriormente deliberar para atualizar a lista de alvos 
+    segundo a distância ao agente.
+    """
 
     @property
     def alterado(self):
@@ -19,14 +31,13 @@ class ModeloMundo(ModeloPlan):
         return self.__elementos 
 
     def __init__(self):
-        self.__posicao = None
+        #self.__posicao = None
         self.__elementos = {}
         self.__recolha = False
         self.__estados = []
         self.__estado = None
         self.__operadores = [OperadorMover(self,direccao)for direccao in\
                                            Direccao]
-        self.__alterado = False
     
     def obter_estado(self):
         return self.__estado

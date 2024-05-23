@@ -3,7 +3,12 @@ from sae import Elemento
 #from modelo.estado_agente import EstadoAgente
 
 class MecDelib:
-
+    """O mecanismo de deliberação fornece o mecanismo deliberativo do nosso 
+    agente. Este será invocado cada vez que o modelo do mundo percepcione
+    uma alteração do ambiente com a finalidade de encontrar os elementos alvo,
+    ordenando eles na lista de alvos por ordem de distancia ao agente. O 
+    cálculo realizado é a distância euclidiana.
+    """
     def __init__(self, modelo_mundo):
         self.__modelo_mundo = modelo_mundo
     

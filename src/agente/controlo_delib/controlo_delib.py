@@ -3,7 +3,16 @@ from agente.controlo_delib.modelo.modelo_mundo import ModeloMundo
 from .mec_delib import MecDelib
 
 class ControloDelib(Controlo):
+    """Na abstração do nosso sistema, o controlo é a parte essencial de 
+    processamento da percepção do ambiente que é realizada pelo nosso agente.
+    Neste caso, o controlo deliberativo oferece funcionalidades características
+    de uma agente deliberativo. 
 
+    O agente deliberativo deve ter a possibilidade de asimilar dinâmicamente a 
+    informação nova da percepção do ambiente, deve poder analizar se aconteceu
+    uma alteração do ambiente e ou se existe um plano para ser direcionado ao
+    objectivo e perceber se existem alvos (objectivos).
+    """
     def __init__(self, planeador):
         self.__planeador = planeador
         self.__plano = None
